@@ -6,4 +6,4 @@
 6. Set database connection params in ```config/db.php```
 7. ```./yii migrate/up```
 8. Import sql.sql to the database
-8. Configure new web server vhost with document root pointing to ```web``` folder
+9. Configure new web server vhost with document root pointing to ```web``` folder
