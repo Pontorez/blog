@@ -1,5 +1,6 @@
 <?php
 
+use kartik\datetime\DateTimePicker;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -20,7 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'post_body')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'post_date')->widget(\vakorovin\datetimepicker\Datetimepicker::className(), ['options' => [
+    <?= $form->field($model, 'post_date')->widget(Datetimepicker::className(), ['options' => [
         'lang' => 'ru',
         'format' => 'Y-m-d H:i',
         'timepicker' => true,

@@ -6,7 +6,10 @@ class m170201_153026_init_db extends Migration
 {
     public function up()
     {
-        $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
+        $tableOptions = '';
+        if (Yii::$app->db->getDriverName() == 'mysql') {
+            $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB';
+        }
         $this->createTable('{{%blog}}', [
             'id'               => $this->primaryKey(),
             'author'           => $this->string(255)->notNull(),
